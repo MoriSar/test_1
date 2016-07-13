@@ -39,7 +39,7 @@ angular.module('commentApp')
 			/**
 			 * monthArr и timeWrite() - инициализация и настройка тобажения времени отправки комментария
 			 */
-			var monthArr=new Array("января","февраля","марта","апреля","мая","июля","июня","августа","сентября","октября","ноября","декабря");
+			var monthArr=new Array("January","February","March","April","May","June","July","August","September","October","November","December");
 
 			function timeWrite(d) {
 				var c = d.toString();
@@ -51,7 +51,7 @@ angular.module('commentApp')
 			if ($scope.data.message) {
 				
 				$scope.data.alert = '';
-				$scope.data.name = prompt('Введите Ваше имя', 'Неизвестный автор');
+				$scope.data.name = prompt('Enter your name', 'Unknown author');
 
 				if ($scope.data.name) {
 
@@ -72,7 +72,7 @@ angular.module('commentApp')
 					$scope.data.message = '';	
 				}
 			} else {
-				$scope.data.alert = 'Введите текст сообщения!';
+				$scope.data.alert = 'Enter your message!';
 			}
 		}
 		// sendMessage()
