@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	<!-- build:css css/common.css -->
+	<!-- bower:css -->
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:css css/main.css -->
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/app.css">
+	<link rel="stylesheet" href="css/media.css">
+	<!-- endbuild -->
+</head>
+<body class="b-page" ng-app="commentApp" ng-cloak ng-controller="CommentController">
+	<section class="b-page__avatar">
+		<div class="b-avatar">
+			<div class="b-avatar__avatar-img">
+				<img src="images/avatar.png" alt="avatar" width="120" height="117" class="b-avatar-img__img">
+			</div>
+			<div class="b-avatar__avatar-text">
+				<h2 class="b-avatar-text__name">Lorem Ipsum</h2>
+				<p class="b-avatar-text__job-name">Lorem ipsum dolor</p>
+				<div class="b-avatar-text__description">
+					<p class="b-avatar-text__description-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos voluptate nemo eveniet, quia. Eaque, porro.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- b-page__avatar -->
+	<section class="b-page__services">
+		<div class="b-services__services-table">
+			<table class="b-services-table">
+				<thead class="b-services-table__table-head">
+					<tr class="b-services-table__table-head-line">
+						<td class="b-services-table__table-head-cell m-services-table__table-head-cell_width_80"></td>
+						<td class="b-services-table__table-head-cell m-services-table__table-head-cell_width_20">Lorem</td>
+					</tr>
+				</thead>
+				<tbody class="b-services-table__table-body">
+					<tr height="10"></tr>
+					<tr class="b-services-table__table-body-line">
+						<td class="b-services-table__table-body-cell">
+							<p class="b-services-table__table-body-cell-text m-services-table__table-body-cell-text_background_1">Lorem ipsum dolor</p>
+						</td>
+						<td class="b-services-table__table-body-cell">666</td>
+					</tr>
+					<tr class="b-services-table__table-body-line">
+						<td class="b-services-table__table-body-cell">
+							<p class="b-services-table__table-body-cell-text m-services-table__table-body-cell-text_background_2">Lorem ipsum</p>
+						</td>
+						<td class="b-services-table__table-body-cell">66</td>
+					</tr>
+					<tr class="b-services-table__table-body-line">
+						<td class="b-services-table__table-body-cell">
+							<p class="b-services-table__table-body-cell-text m-services-table__table-body-cell-text_background_3">Lorem</p>
+						</td>
+						<td class="b-services-table__table-body-cell">6</td>
+					</tr>
+					<tr height="10"></tr>
+				</tbody>
+				<tfoot class="b-services-table__table-foot">
+					<tr class="b-services-table__table-foot-line">
+						<td class="b-services-table__table-foot-cell">LOREM</td>
+						<td class="b-services-table__table-foot-cell m-services-table__table-foot-cell_position_center">738</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section>
+	<!-- b-page__services -->
+	<section class="b-page__reviews">
+		<main class="b-reviews">
+			<div class="b-reviews__controll-panel">
+				<div class="b-controll-panel__panel-buttons">
+					<ul class="b-panel-buttons" ng-click="changeCommentsDisplay($event)">
+						<li data-name="data_lastComments" class="b-panel-buttons__button" ng-class="data.buttonLast">Last comments</li>
+						<li data-name="data_allComments" class="b-panel-buttons__button" ng-class="data.buttonAll">All comments</li>
+					</ul>
+				</div>
+				<div class="b-controll-panel__icons">
+					<ul class="b-icons">
+						<li class="b-icons__ico-like">666</li>
+						<li class="b-icons__ico-comment">{{comments.length}}</li>
+					</ul>
+				</div>
+			</div>
+			<div class="b-reviews__comments-item">
+				<div class="b-comments-item" ng-repeat="comment in comments | orderBy:'dateBySeconds' | limitTo: -3" ng-show="data.showLast">
+					<div class="b-comments-item__comment-head">
+						<p class="b-comments-item__comment-head-title m-comments-item__comment-head_display_inline-block">{{comment.name}}</p>
+						<p class="b-comments-item__comment-head-date m-comments-item__comment-head_display_inline-block">{{comment.date}}</p>
+					</div>
+					<div class="b-comments-item__comment-body">
+						<p class="b-comments-item__comment-body-text">{{comment.message}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="b-reviews__comments-item">
+				<div class="b-comments-item" ng-repeat="comment in comments | orderBy:'dateBySeconds'" ng-show="data.showAll">
+					<div class="b-comments-item__comment-head">
+						<p class="b-comments-item__comment-head-title m-comments-item__comment-head_display_inline-block">{{comment.name}}</p>
+						<p class="b-comments-item__comment-head-date m-comments-item__comment-head_display_inline-block">{{comment.date}}</p>
+					</div>
+					<div class="b-comments-item__comment-body">
+						<p class="b-comments-item__comment-body-text">{{comment.message}}</p>
+					</div>
+				</div>
+			</div>
+		</main>
+	</section>
+	<!-- b-page__reviews -->
+	<footer class="b-page__to-write-a-review">
+		<div class="b-to-write-a-review">
+			<form action="#" class="b-to-write-a-review__form">
+				<textarea name="" class="b-form__textarea" placeholder="Enter your message" ng-model="data.message"  ng-keypress="keypress($event)"></textarea>
+				<p class="b-form__alert">{{data.alert}}</p>
+				<input type="button" name="" value="Send message" class="b-form__submit" ng-click="sendMessage()">
+			</form>
+		</div>
+	</footer>
+	<!-- b-page__to-write-a-review -->
+	<!-- build:js scripts/common.js -->
+	<!-- bower:js -->
+	<script src="../bower_components/angular/angular.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+	<!-- build:js scripts/main.js -->
+	<script src="js/app.js"></script>
+	<script src="js/controllers/CommentController.js"></script>
+	<!-- endbuild -->
+</body>
+</html>

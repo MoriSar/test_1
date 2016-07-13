@@ -1,0 +1,20 @@
+{
+	"comments": [{
+		"name": "Lorem",
+		"date": "11 october 2011",
+		"dateBySeconds": 10,
+		"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam debitis eligendi odio accusantium exercitationem, nesciunt."
+	},
+	{
+		"name": "Lorem Ipsum",
+		"date": "11 october 2011",
+		"dateBySeconds": 11,
+		"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut expedita in hic repellendus numquam magni libero ipsam consectetur beatae aliquam tempore quis voluptatum excepturi, recusandae molestiae eos quo sapiente minus!"
+	},
+	{
+		"name": "Lorem Ipsum",
+		"date": "13 october 2011",
+		"dateBySeconds": 12,
+		"message": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ut eveniet doloribus sunt necessitatibus, ad nam aspernatur minima! Necessitatibus, maxime?"
+	}]
+}

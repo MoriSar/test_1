@@ -1,0 +1,18 @@
+/*
+@font-face {
+	font-family: 'daniel_blackregular';
+	src: url('../fonts/DanielBlack/danielbk-webfont.eot');
+	src: url('../fonts/DanielBlack/danielbk-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/DanielBlack/danielbk-webfont.woff2') format('woff2'),
+	url('../fonts/DanielBlack/danielbk-webfont.woff') format('woff'),
+	url('../fonts/DanielBlack/danielbk-webfont.ttf') format('truetype'),
+	url('../fonts/DanielBlack/danielbk-webfont.svg#daniel_blackregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
+@font-face {
+  font-family: 'PTSans-Bold';
+  src: url("../fonts/PTSans-Bold/PTSans-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/PTSans-Bold/PTSans-Bold.woff") format("woff"), url("../fonts/PTSans-Bold/PTSans-Bold.ttf") format("truetype"), url("../fonts/PTSans-Bold/PTSans-Bold.svg#PTSans-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
